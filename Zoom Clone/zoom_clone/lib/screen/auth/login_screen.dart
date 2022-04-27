@@ -14,16 +14,29 @@ class LoginScreen extends StatelessWidget {
         children: [
           Text(
             'Start or join a meeting',
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Colors.black87,
+                fontSize: 25,
+                fontWeight: FontWeight.bold),
           ),
           SizedBox(
-            height: 20.0,
+            height: 8.0,
           ),
           Image.asset('assets/images/onboarding.jpg'),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 40),
-            child: CustomButton(text: 'Login'),
-          )
+            padding: EdgeInsets.symmetric(vertical: 2),
+            child: CustomButton(
+              text: 'Login',
+              onPressed: () {
+                print('You are now logged in');
+              },
+            ),
+          ),
+          CustomButton(
+              text: 'Register',
+              onPressed: () {
+                print('You press register');
+              }),
         ],
       ),
     ));
