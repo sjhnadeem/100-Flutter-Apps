@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zoom_clone/controllers/auth_controller.dart';
 import 'package:zoom_clone/screen/widget/custom_button.dart';
 import 'package:zoom_clone/screen/widget/second_custom_button.dart';
 
@@ -29,7 +30,8 @@ class LoginScreen extends StatelessWidget {
             child: CustomButton(
               text: 'Login',
               onPressed: () {
-                print('You are now logged in');
+                AuthController().signinWithGoogle();
+                print('Authenticated!');
               },
             ),
           ),
