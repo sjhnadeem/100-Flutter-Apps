@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:zoom_clone/utils/colors.dart';
 
-class CustomButton extends StatelessWidget {
+class SecondCustomButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
 
-  const CustomButton({Key? key, required this.text, required this.onPressed})
+  const SecondCustomButton(
+      {Key? key, required this.text, required this.onPressed})
       : super(key: key);
 
   @override
@@ -17,11 +18,12 @@ class CustomButton extends StatelessWidget {
         child: Text(
           text,
           style: TextStyle(
+            color: Color.fromRGBO(73, 25, 133, 1),
             fontSize: 17,
           ),
         ),
         style: ElevatedButton.styleFrom(
-          primary: buttonColor,
+          primary: secondaryButtonColor,
           minimumSize: Size(double.infinity, 50),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(
